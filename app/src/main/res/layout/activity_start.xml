@@ -27,11 +27,11 @@
         />
 
     <Button
-        android:id="@+id/goToSigninBtn"
+        android:id="@+id/goToJoinBtn"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/signin"
+        android:text="@string/join"
         />
 
 </LinearLayout>

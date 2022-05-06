@@ -14,11 +14,12 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_start);
 
         Button loginBtn = findViewById(R.id.goToLoginBtn);
-        Button signinBtn = findViewById(R.id.goToSigninBtn);
+        Button joinBtn = findViewById(R.id.goToJoinBtn);
 
         Intent moveToLogin = new Intent(this, LoginActivity.class);
-        // 회원가입 Intent 선언
+        Intent moveToJoin = new Intent(this, JoinActivity.class);
 
         loginBtn.setOnClickListener(v->startActivity(moveToLogin));
+        joinBtn.setOnClickListener(v->startActivity(moveToJoin));
     }
 }
