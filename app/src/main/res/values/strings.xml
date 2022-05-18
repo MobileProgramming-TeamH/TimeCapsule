@@ -15,4 +15,10 @@
     <string name="password_email_warning">이미 가입된 이메일입니다..</string>
     <string name="login_failed">로그인에 실패했습니다.</string>
     <string name="password_check">비밀번호 확인</string>
+    <string name="tmp_text">TEXT</string>
+    <string name="today_question">오늘의 질문</string>
+    <string name="today_answer">오늘의 답변</string>
+    <string name="today_writeAnswer">답변 작성하기</string>
+    <string name="today_diary">오늘의 일기</string>
+    <string name="today_diaryContent">오늘의 일기 내용</string>
 </resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#888888"
+        android:text="@string/tmp_text"
+        android:textSize="30sp"
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_todayQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#888888"
+        android:text="@string/today_question"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_todayAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#888888"
+        android:text="@string/today_answer"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_todayDiary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#888888"
+        android:text="@string/today_diary"
+        android:textSize="25sp"/>
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_todayDiaryContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#888888"
+        android:text="@string/today_diaryContent"
+        android:textSize="20sp"/>
+
+</LinearLayout>
