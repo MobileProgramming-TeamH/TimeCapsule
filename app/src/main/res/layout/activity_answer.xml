@@ -5,24 +5,26 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/Textview"
+        android:layout_marginTop="10dp"
+        android:id="@+id/Question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="질문예시..."
-        android:textSize="30dp"/>
+        android:text="Question"
+        android:textSize="30sp"/>
 
-    <EditText
-        android:id="@+id/Edit"
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/Answer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/today_answer"
-        android:inputType="text"
-        android:textSize="30dp"/>
+        android:text="Answer"
+        android:textSize="30sp"/>
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="뒤로가기"
         android:layout_gravity="right"
         android:textSize="30dp"/>
+
 </LinearLayout>

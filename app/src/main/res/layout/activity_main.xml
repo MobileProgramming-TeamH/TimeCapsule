@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#46606D">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/month"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="MAY"
-        android:fontFamily="@font/ablb"
+        android:layout_gravity="center"
+        android:text="@string/title"
+        android:textAlignment="center"
         android:textSize="30sp"
-        android:layout_above="@id/calendarView"
-        android:layout_centerHorizontal="true"
-        android:textColor="#f2f2f2"/>
-
+        android:textColor="@color/title"/>
 
     <CalendarView
-        android:id="@+id/calendarView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:focusedMonthDateColor="#3ffa7f"
-        android:unfocusedMonthDateColor="#f2f2f2"/>
+        android:id="@+id/calendarView"
+        android:layout_gravity="center"/>
 
-</RelativeLayout>
+
+</LinearLayout>
+

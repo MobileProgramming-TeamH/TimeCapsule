@@ -34,9 +34,9 @@ public class JoinActivity extends AppCompatActivity {
         setContentView(R.layout.activity_join);
         mAuth = FirebaseAuth.getInstance();
 
-        EditText email = findViewById(R.id.email);
-        EditText password = findViewById(R.id.password);
-        EditText passwordCheck = findViewById(R.id.pwdcheck);
+        EditText email = findViewById(R.id.enterEmail);
+        EditText password = findViewById(R.id.enterPassword);
+        EditText passwordCheck = findViewById(R.id.enterPasswordCheck);
 
         moveToLogin = new Intent(this, LoginActivity.class);
 
@@ -76,7 +76,8 @@ public class JoinActivity extends AppCompatActivity {
                             HashMap<Object, String> hashMap = new HashMap<>();
                             hashMap.put("email", userEmail);
                             FirebaseFirestore database = FirebaseFirestore.getInstance();
-                            database.collection("Users").document(mAuth.getCurrentUser().getUid()).set(hashMap);
+                            database.collection("Users").document(mAuth.getCurrentUser().getUid()).collection("Date").add(hashMap);
+
                             startActivity(moveToLogin);
                             finish();
                         }
