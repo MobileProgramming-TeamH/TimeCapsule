@@ -27,6 +27,7 @@ public class crawlingactivity extends AppCompatActivity {
             @Override
             public void handleMessage(Message msg){
                 Bundle bundle =msg.getData();
+
             }
         };
 

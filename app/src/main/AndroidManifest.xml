@@ -32,6 +32,10 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".DiaryActivity" />
+        <activity android:name=".AnswerActivity"/>
+        <activity android:name=".QuestionActivity"/>
+        <activity android:name=".FindPasswordActivity"/>
+        <activity android:name=".crawlingactivity"/>
     </application>
 
 </manifest>

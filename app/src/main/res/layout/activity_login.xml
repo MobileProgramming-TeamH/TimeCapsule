@@ -1,101 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#46606D">
+    android:layout_margin="50dp"
+    >
 
     <TextView
-        android:id="@+id/login"
-        android:layout_width="match_parent"
+        android:id="@+id/info_login"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:textAllCaps="false"
-        android:textColor="#F2F2F2"
-        android:textSize="20sp"
-        android:fontFamily="@font/ablb"
-        android:gravity="center"
-        android:layout_marginTop="100dp"/>
-
-    <EditText
-        android:id="@+id/login_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:hint = "E-mail"
-        android:textColorHint="#f2f2f2"
-        android:fontFamily="@font/ablb"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"
-        android:layout_marginTop="100dp"/>
-
-    <EditText
-        android:id="@+id/login_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:hint = "Password"
-        android:textColorHint="#f2f2f2"
-        android:fontFamily="@font/ablb"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"/>
-
-
-    <Button
-        android:id="@+id/goToJoinBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sign-up"
-        android:textAllCaps="false"
-        android:textColor="#46606D"
-        android:fontFamily="@font/ablb"
-        android:layout_marginRight="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/shape"
+        android:layout_gravity="center"
+        android:text="@string/login"
+        android:textAlignment="center"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        android:textSize="40sp"
         />
 
-    <Button
-        android:id="@+id/loginBackBtn"
+    <EditText
+        android:id="@+id/enterEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape"
-        android:text="Back"
-        android:textAllCaps="false"
-        android:textColor="#46606D"
-        android:fontFamily="@font/ablb"
-        android:layout_marginRight="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginBottom="20dp"/>
+        android:inputType="textEmailAddress"
+        android:hint="@string/email"/>
+
+    <EditText
+        android:id="@+id/enterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="@string/password"/>
 
     <Button
         android:id="@+id/loginBtn"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape"
-        android:text="Login"
-        android:textAllCaps="false"
-        android:textColor="#46606D"
-        android:fontFamily="@font/ablb"
-        android:layout_marginRight="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginBottom="20dp"/>
+        android:layout_gravity="center"
+        android:text="@string/login"
+        />
 
     <Button
-        android:id="@+id/findPwBtn"
-        android:layout_width="match_parent"
+        android:id="@+id/findPasswordBtn"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape"
-        android:text="Find password"
-        android:textAllCaps="false"
-        android:textColor="#46606D"
-        android:fontFamily="@font/ablb"
-        android:layout_marginRight="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginBottom="20dp"/>
+        android:layout_gravity="center"
+        android:text="@string/findPassword"
+        />
 
 
 </LinearLayout>
