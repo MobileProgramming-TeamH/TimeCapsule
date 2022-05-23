@@ -19,7 +19,7 @@ public class StartActivity extends AppCompatActivity {
         Intent moveToLogin = new Intent(this, LoginActivity.class);
         Intent moveToJoin = new Intent(this, JoinActivity.class);
 
-        loginBtn.setOnClickListener(v->startActivity(moveToLogin));
-        joinBtn.setOnClickListener(v->startActivity(moveToJoin));
+        loginBtn.setOnClickListener(v -> startActivity(moveToLogin));
+        joinBtn.setOnClickListener(v -> startActivity(moveToJoin));
     }
 }
