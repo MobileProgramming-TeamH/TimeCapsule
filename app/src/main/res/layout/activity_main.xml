@@ -1,27 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:background="#46606D">
 
     <TextView
+        android:id="@+id/month"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:text="@string/title"
-        android:textAlignment="center"
+        android:textColor="@color/title"
         android:textSize="30sp"
-        android:textColor="@color/title"/>
+        android:fontFamily="@font/ablb"
+        android:layout_above="@id/calenderView"
+        android:gravity="center"
+        android:layout_marginTop="70dp"/>
+
 
     <CalendarView
+        android:id="@+id/calenderView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/calendarView"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:focusedMonthDateColor="#3ffa7f"
+        android:unfocusedMonthDateColor="#f2f2f2"/>
 
+    <Button
+        android:id="@+id/todayquestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Today Question"
+        android:textAllCaps="false"
+        android:textColor="#46606D"
+        android:fontFamily="@font/ablb"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape"
+        />
+
+    <Button
+        android:id="@+id/answers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:text="My Answers"
+        android:textAllCaps="false"
+        android:textColor="#46606D"
+        android:fontFamily="@font/ablb"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/diary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:text="Diary"
+        android:textAllCaps="false"
+        android:textColor="#46606D"
+        android:fontFamily="@font/ablb"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textColor="#46606D"
+        android:fontFamily="@font/ablb"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="20dp"/>
 
 </LinearLayout>
-

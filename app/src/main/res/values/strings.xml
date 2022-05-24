@@ -21,4 +21,5 @@
     <string name="today_writeAnswer">답변 작성하기</string>
     <string name="today_diary">오늘의 일기</string>
     <string name="today_diaryContent">오늘의 일기 내용</string>
+    <string name="how_to_use">사용법</string>
 </resources>
