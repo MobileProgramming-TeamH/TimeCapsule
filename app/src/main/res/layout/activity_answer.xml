@@ -6,19 +6,19 @@
     android:background="#46606D">
 
     <TextView
-        android:id="@+id/today_answer"
+        android:id="@+id/Answer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ablb"
         android:gravity="center_horizontal"
-        android:text="@stirng/today_answer"
+        android:text="@string/today_answer"
         android:textAllCaps="false"
         android:textColor="#f2f2f2"
         android:textSize="20sp"
         android:layout_marginTop="100dp"/>
 
     <TextView
-        android:id="@+id/today_question"
+        android:id="@+id/Question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/today_question"
@@ -29,20 +29,6 @@
         android:gravity="center"
         android:layout_marginTop="50dp"/>
 
-    <TextView
-        android:inputType="textMultiLine"
-        android:layout_height="250dp"
-        android:layout_width="match_parent"
-        android:scrollbars="vertical"
-        android:fontFamily="@font/ablb"
-        android:text="so good"
-        android:textAllCaps="false"
-        android:textColor="#f2f2f2"
-        android:textSize="20sp"
-        android:background="@drawable/border"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"/>
 
     <Button
         android:id="@+id/button"

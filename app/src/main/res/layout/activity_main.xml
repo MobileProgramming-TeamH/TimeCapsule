@@ -25,7 +25,6 @@
         android:layout_gravity="center"
         android:focusedMonthDateColor="#3ffa7f"
         android:unfocusedMonthDateColor="#f2f2f2"/>
-
     <Button
         android:id="@+id/todayquestion"
         android:layout_width="match_parent"
@@ -39,7 +38,6 @@
         android:layout_marginBottom="20dp"
         android:background="@drawable/shape"
         />
-
     <Button
         android:id="@+id/answers"
         android:layout_width="match_parent"
@@ -52,7 +50,6 @@
         android:layout_marginRight="70dp"
         android:layout_marginLeft="70dp"
         android:layout_marginBottom="20dp"/>
-
     <Button
         android:id="@+id/diary"
         android:layout_width="match_parent"
@@ -78,5 +75,7 @@
         android:layout_marginRight="70dp"
         android:layout_marginLeft="70dp"
         android:layout_marginBottom="20dp"/>
+
+  
 
 </LinearLayout>
