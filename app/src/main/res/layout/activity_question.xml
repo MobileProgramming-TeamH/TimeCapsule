@@ -1,28 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="#46606D">
 
     <TextView
-        android:id="@+id/Textview"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="질문예시..."
-        android:textSize="30dp"/>
+        android:fontFamily="@font/ablb"
+        android:gravity="center_horizontal"
+        android:text="Today Question"
+        android:textAllCaps="false"
+        android:textColor="#f2f2f2"
+        android:textSize="20sp"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="How was it today?"
+        android:fontFamily="@font/ablb"
+        android:textAllCaps="false"
+        android:textColor="#f2f2f2"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="150dp"/>
+
 
     <EditText
         android:id="@+id/Edit"
+        android:hint="@string/today_answer"
+        android:inputType="textMultiLine"
+        android:lines="6"
+        android:minLines="4"
+        android:maxLines="10"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:scrollbars="vertical"
+        android:fontFamily="@font/ablb"
+        android:textColor="#f2f2f2"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"/>
+    <Button
+        android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/today_answer"
-        android:inputType="text"
-        android:textSize="30dp"/>
+        android:text="Back"
+        android:textAllCaps="false"
+        android:fontFamily="@font/ablb"
+        android:background="@drawable/shape"
+        android:textColor="#46606D"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"/>
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save"
-        android:layout_gravity="right"
-        android:textSize="30dp"/>
+        android:text="Answer"
+        android:textAllCaps="false"
+        android:fontFamily="@font/ablb"
+        android:background="@drawable/shape"
+        android:textColor="#46606D"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"/>
 </LinearLayout>
