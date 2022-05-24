@@ -6,27 +6,34 @@
     android:background="#46606D">
 
     <TextView
-        android:id="@+id/Answer"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ablb"
         android:gravity="center_horizontal"
-        android:text="@string/today_answer"
+        android:text="Manual"
         android:textAllCaps="false"
         android:textColor="#f2f2f2"
         android:textSize="20sp"
         android:layout_marginTop="100dp"/>
+
     <TextView
-        android:id="@+id/Question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/today_question"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:fontFamily="@font/ablb"
+        android:gravity="center"
+        android:text="This app can calm you down by recording and reflecting on your day.\n\n
+In today's question, record your feelings and thoughts when you see the question.\n\n
+In your diary, you're free to record what you didn't write in today's questions.\n\n
+In the answers, you can view the answers that you recorded in the past by question.\n\n
+We want you to get to know yourself more through this app. Good luck:)"
         android:textAllCaps="false"
         android:textColor="#f2f2f2"
         android:textSize="20sp"
-        android:gravity="center"
-        android:layout_marginTop="50dp"/>
+        android:background="@drawable/border"/>
 
     <Button
         android:id="@+id/button"
@@ -37,8 +44,10 @@
         android:fontFamily="@font/ablb"
         android:background="@drawable/shape"
         android:textColor="#46606D"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="50dp"
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp"/>
+
+
 
 </LinearLayout>

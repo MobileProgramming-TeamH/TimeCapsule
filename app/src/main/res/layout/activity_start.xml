@@ -49,4 +49,16 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp"/>
+    <Button
+        android:id="@+id/goTomanualbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/manual"
+        android:fontFamily="@font/ablb"
+        android:textColor="#46606D"
+        android:textAllCaps="false"
+        android:background="@drawable/shape"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"/>
 </LinearLayout>
