@@ -25,15 +25,7 @@
         android:layout_marginRight="30dp"
         android:fontFamily="@font/ablb"
         android:gravity="center"
-        android:text="This app can calm you down by recording and reflecting on your day.\n\n
-
-In today's question, record your feelings and thoughts when you see the question.\n\n
-
-In your diary, you're free to record what you didn't write in today's questions.\n\n
-
-In the answers, you can view the answers that you recorded in the past by question.\n\n
-
-We want you to get to know yourself more through this app. Good luck:)"
+        android:text="@string/manual"
         android:textAllCaps="false"
         android:textColor="#f2f2f2"
         android:textSize="20sp"
