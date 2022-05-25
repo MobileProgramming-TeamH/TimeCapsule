@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -34,9 +35,9 @@ public class JoinActivity extends AppCompatActivity {
         setContentView(R.layout.activity_join);
         mAuth = FirebaseAuth.getInstance();
 
-        EditText email = findViewById(R.id.enterEmail);
-        EditText password = findViewById(R.id.enterPassword);
-        EditText passwordCheck = findViewById(R.id.enterPasswordCheck);
+        EditText email = findViewById(R.id.email);
+        EditText password = findViewById(R.id.password);
+        EditText passwordCheck = findViewById(R.id.pwdcheck);
 
         moveToLogin = new Intent(this, LoginActivity.class);
 
@@ -76,7 +77,8 @@ public class JoinActivity extends AppCompatActivity {
                             HashMap<Object, String> hashMap = new HashMap<>();
                             hashMap.put("email", userEmail);
                             FirebaseFirestore database = FirebaseFirestore.getInstance();
-                            database.collection("Users").document(mAuth.getCurrentUser().getUid()).collection("Date").add(hashMap);
+                            database.collection("Users").document(mAuth.getCurrentUser().getUid()).set(hashMap);
+
 
                             startActivity(moveToLogin);
                             finish();

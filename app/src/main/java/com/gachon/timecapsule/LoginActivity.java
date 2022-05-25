@@ -33,13 +33,15 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        EditText enterEmail = findViewById(R.id.enterEmail);
-        EditText enterPassword = findViewById(R.id.enterPassword);
+        EditText enterEmail = findViewById(R.id.login_email);
+        EditText enterPassword = findViewById(R.id.login_password);
 
         Button loginBtn = findViewById(R.id.loginBtn);
-        Button findPasswordBtn = findViewById(R.id.findPasswordBtn);
+        Button findPasswordBtn = findViewById(R.id.findPwBtn);
 
         moveToMain = new Intent(this, MainActivity.class);
+        Intent moveToFindPassword = new Intent(this, FindPasswordActivity.class);
+
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -52,6 +54,13 @@ public class LoginActivity extends AppCompatActivity {
                 else if(enterPassword.length() < 6) {
                     StartToast(R.string.password_length_warning);
                 } else signIn(enterEmail.getText().toString().trim(), enterPassword.getText().toString().trim());
+            }
+        });
+
+        findPasswordBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(moveToFindPassword);
             }
         });
 

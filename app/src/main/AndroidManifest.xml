@@ -5,9 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
-
 
     <application
         android:usesCleartextTraffic="true"
@@ -32,10 +29,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".DiaryActivity" />
-        <activity android:name=".AnswerActivity"/>
         <activity android:name=".QuestionActivity"/>
         <activity android:name=".FindPasswordActivity"/>
-        <activity android:name=".crawlingactivity"/>
     </application>
 
 </manifest>

@@ -14,7 +14,7 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
-public class crawlingactivity extends AppCompatActivity {
+public class CrawlingActivity extends AppCompatActivity {
 
     private String URL = "https://steemit.com/kr/@centering/1010";
     @Override
@@ -27,7 +27,6 @@ public class crawlingactivity extends AppCompatActivity {
             @Override
             public void handleMessage(Message msg){
                 Bundle bundle =msg.getData();
-
             }
         };
 
@@ -41,12 +40,12 @@ public class crawlingactivity extends AppCompatActivity {
                     String[] questions=sentence.text().split("\\?");
                     //  질문 저장할 때 물음표 기준으로 저장.
 
-                    for(int i=0; i<questions.length; i++) {
+                  /*  for(int i=0; i<questions.length; i++) {
                         Log.d("Qtion", "Q:" + questions[i]+" ? ");
-                    }
+                    }*/
 
                     int j=(int)(Math.random()*questions.length);
-                    bundle.putString("Questions",questions[j]);
+                    bundle.putString("Question",questions[j]);
                     Message msg=handler.obtainMessage();
                     msg.setData(bundle);
                     handler.sendMessage(msg);
