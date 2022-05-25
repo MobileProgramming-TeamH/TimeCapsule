@@ -40,12 +40,12 @@ public class CrawlingActivity extends AppCompatActivity {
                     String[] questions=sentence.text().split("\\?");
                     //  질문 저장할 때 물음표 기준으로 저장.
 
-                    for(int i=0; i<questions.length; i++) {
+                  /*  for(int i=0; i<questions.length; i++) {
                         Log.d("Qtion", "Q:" + questions[i]+" ? ");
-                    }
+                    }*/
 
                     int j=(int)(Math.random()*questions.length);
-                    bundle.putString("Questions",questions[j]);
+                    bundle.putString("Question",questions[j]);
                     Message msg=handler.obtainMessage();
                     msg.setData(bundle);
                     handler.sendMessage(msg);
