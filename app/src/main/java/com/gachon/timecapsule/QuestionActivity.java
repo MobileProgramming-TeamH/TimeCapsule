@@ -14,6 +14,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.jsoup.Jsoup;
@@ -44,6 +47,8 @@ public class QuestionActivity extends AppCompatActivity {
         edit_text=(EditText)findViewById(R.id.Edit);
         question_text_view=findViewById(R.id.questionView);
 
+        FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
+
         save_button=(Button)findViewById(R.id.button);//활성화 버튼
         save_button.setOnClickListener(new OnClickListener(){
             @Override
@@ -58,45 +63,44 @@ public class QuestionActivity extends AppCompatActivity {
     }
     class CrawlingThread extends Thread{
         private String URL = "https://steemit.com/kr/@centering/1010";
-            @Override
-            public void run() {
-                try {
-                    Document doc = Jsoup.connect(URL).get();
-                    Elements sentence = doc.select("ol");
+        @Override
+        public void run() {
+            try {
+                Document doc = Jsoup.connect(URL).get();
+                Elements sentence = doc.select("ol");
 
-                    String[] questions = sentence.text().split("\\?");
-                    //  질문 저장할 때 물음표 기준으로 저장.
+                String[] questions = sentence.text().split("\\?");
+                //  질문 저장할 때 물음표 기준으로 저장.
 
                    /* for(int i=0; i<questions.length; i++) {
                         Log.d("Qtion", "Q:" + questions[i]+" ? ");
                     }*/
 
-                    int j = (int) (Math.random() * questions.length);
+                int j = (int) (Math.random() * questions.length);
 
-                    Message msg = handler.obtainMessage();
-                    Bundle bundle=new Bundle();
-                    bundle.putString("Question", questions[j]);
-                    msg.setData(bundle);
-                    handler.sendMessage(msg);
-                    //질문 리스트 중에서 하나만 메인쓰레드로 핸들러를 이용하여 보냄
+                Message msg = handler.obtainMessage();
+                Bundle bundle=new Bundle();
+                bundle.putString("Question", questions[j]);
+                msg.setData(bundle);
+                handler.sendMessage(msg);
+                //질문 리스트 중에서 하나만 메인쓰레드로 핸들러를 이용하여 보냄
 
-                } catch (IOException ioException) {
-                    ioException.printStackTrace();
-                }
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
             }
+        }
 
-}
+    }
     class MainHandler extends Handler{
-    @Override
+        @Override
         public void handleMessage(@NonNull Message msg){
-        super.handleMessage(msg);
+            super.handleMessage(msg);
 
-        Bundle bundle=msg.getData();
-        String question=bundle.getString("Question");
+            Bundle bundle=msg.getData();
+            String question=bundle.getString("Question");
 
-        question_text_view.setText(question);
+            question_text_view.setText(question);
 
         }
     }
 }
-
