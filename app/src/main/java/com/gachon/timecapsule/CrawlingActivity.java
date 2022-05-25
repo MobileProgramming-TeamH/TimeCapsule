@@ -14,7 +14,7 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
-public class crawlingactivity extends AppCompatActivity {
+public class CrawlingActivity extends AppCompatActivity {
 
     private String URL = "https://steemit.com/kr/@centering/1010";
     @Override
@@ -27,7 +27,6 @@ public class crawlingactivity extends AppCompatActivity {
             @Override
             public void handleMessage(Message msg){
                 Bundle bundle =msg.getData();
-
             }
         };
 

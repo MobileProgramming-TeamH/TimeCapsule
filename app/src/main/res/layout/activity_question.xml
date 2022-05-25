@@ -28,10 +28,7 @@
         android:gravity="center"
         android:layout_marginTop="150dp"/>
 
-
     <EditText
-        android:id="@+id/Edit"
-        android:hint="@string/today_answer"
         android:inputType="textMultiLine"
         android:lines="6"
         android:minLines="4"
@@ -45,8 +42,9 @@
         android:layout_marginTop="40dp"
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp"/>
+
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Back"
@@ -57,8 +55,9 @@
         android:layout_marginTop="50dp"
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp"/>
+
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Answer"
@@ -69,4 +68,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp"/>
+
+
 </LinearLayout>

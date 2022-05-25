@@ -1,52 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#46606D">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/today_diary"
+        android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/ablb"
-        android:gravity="center_horizontal"
-        android:text="@string/today_diary"
-        android:textAllCaps="false"
-        android:textColor="#f2f2f2"
-        android:textSize="20sp"
-        android:layout_marginTop="100dp"/>
+        android:background="#888888"
+        android:text="@string/tmp_text"
+        android:textSize="30sp"
+        />
 
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_todayDiary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#888888"
+        android:text="@string/today_diary"
+        android:textSize="25sp"/>
 
     <EditText
-        android:inputType="textMultiLine"
-        android:lines="10"
-        android:minLines="4"
-        android:maxLines="20"
-        android:layout_height="250dp"
-        android:layout_width="match_parent"
-        android:scrollbars="vertical"
-        android:fontFamily="@font/ablb"
-        android:textColor="#f2f2f2"
-        android:textSize="20sp"
-        android:background="@drawable/border"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"/>
-
-    <Button
-        android:id="@+id/button1"
+        android:layout_marginTop="10dp"
+        android:id="@+id/et_todayDiaryContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back"
-        android:textAllCaps="false"
-        android:fontFamily="@font/ablb"
-        android:background="@drawable/shape"
-        android:textColor="#46606D"
-        android:layout_marginTop="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"/>
+        android:background="#888888"
+        android:text="@string/today_diaryContent"
+        android:textSize="20sp"/>
 
-
+    <Button
+        android:id="@+id/saveDiaryBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        />
 
 </LinearLayout>
