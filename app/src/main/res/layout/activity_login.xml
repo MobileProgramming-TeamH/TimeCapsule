@@ -54,7 +54,8 @@
         android:fontFamily="@font/ablb"
         android:layout_marginRight="70dp"
         android:layout_marginLeft="70dp"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="50dp"/>
 
     <Button
         android:id="@+id/findPwBtn"
