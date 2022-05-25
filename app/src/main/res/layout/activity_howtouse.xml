@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/ablb"
         android:gravity="center_horizontal"
-        android:text="@string/how_to_use"
+        android:text="Manual"
         android:textAllCaps="false"
         android:textColor="@color/title"
         android:textSize="20sp"
@@ -38,20 +38,6 @@ We want you to get to know yourself more through this app. Good luck:)"
         android:textColor="#f2f2f2"
         android:textSize="20sp"
         android:background="@drawable/border"/>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        android:textAllCaps="false"
-        android:fontFamily="@font/ablb"
-        android:background="@drawable/shape"
-        android:textColor="#46606D"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"/>
-
 
 
 </LinearLayout>
