@@ -1,27 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:background="#46606D">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/title"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:textColor="@color/title"/>
-
-    <CalendarView
+        android:id="@+id/month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/month"
+        android:fontFamily="@font/ablb"
+        android:textSize="30sp"
+        android:layout_above="@id/calendarView"
+        android:layout_centerHorizontal="true"
+        android:textColor="#f2f2f2"/>
+
+
+    <CalendarView
         android:id="@+id/calendarView"
-        android:layout_gravity="center"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:focusedMonthDateColor="#3ffa7f"
+        android:unfocusedMonthDateColor="#f2f2f2"/>
 
+    <Button
+        android:id="@+id/goToQuestionBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/today_question"
+        android:fontFamily="@font/ablb"
+        android:textColor="#46606D"
+        android:textAllCaps="false"
+        android:background="@drawable/shape"
+        android:layout_below="@id/calendarView"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"/>
 
-</LinearLayout>
+    <Button
+        android:id="@+id/goToDiaryBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/diary"
+        android:fontFamily="@font/ablb"
+        android:textColor="#46606D"
+        android:textAllCaps="false"
+        android:background="@drawable/shape"
+        android:layout_below="@id/goToQuestionBtn"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"/>
 
+</RelativeLayout>
