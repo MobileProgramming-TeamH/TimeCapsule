@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/ablb"
         android:gravity="center_horizontal"
-        android:text="Today Diary"
+        android:text="@string/today_diary"
         android:textAllCaps="false"
         android:textColor="#f2f2f2"
         android:textSize="20sp"
@@ -19,6 +19,7 @@
 
 
     <EditText
+        android:id="@+id/et_todayDiaryContent"
         android:inputType="textMultiLine"
         android:lines="10"
         android:minLines="4"
@@ -38,7 +39,7 @@
         android:id="@+id/saveDiaryBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="@string/save"
         android:textAllCaps="false"
         android:fontFamily="@font/ablb"
         android:background="@drawable/shape"

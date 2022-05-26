@@ -16,9 +16,9 @@
     <string name="login_failed">로그인에 실패했습니다.</string>
     <string name="password_check">re-enter password</string>
     <string name="tmp_text">TEXT</string>
-    <string name="today_answer">오늘의 답변</string>
+    <string name="today_answer">Today Answer</string>
     <string name="today_writeAnswer">답변 작성하기</string>
-    <string name="today_diary">오늘의 일기</string>
+    <string name="today_diary">Today Diary</string>
     <string name="today_diaryContent">오늘의 일기 내용</string>
     <string name="how_to_use">사용법</string>
     <string name="e_mail">E-mail</string>
