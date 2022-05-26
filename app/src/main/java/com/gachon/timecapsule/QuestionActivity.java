@@ -10,6 +10,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -56,6 +57,7 @@ public class QuestionActivity extends AppCompatActivity {
                 answer=edit_text.getText().toString();
                 FirebaseFirestore database = FirebaseFirestore.getInstance();
                 database.collection("Users").document(Uid).collection("Date").document(date).update("Answer",answer);
+                Toast.makeText(getApplicationContext(), "save.", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });

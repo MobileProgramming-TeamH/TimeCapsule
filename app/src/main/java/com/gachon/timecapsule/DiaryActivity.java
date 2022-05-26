@@ -70,6 +70,7 @@ public class DiaryActivity extends AppCompatActivity {
                         });
 
                 Toast.makeText(getApplicationContext(), "save.", Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
 
