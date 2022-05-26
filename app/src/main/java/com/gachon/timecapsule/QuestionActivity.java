@@ -33,13 +33,39 @@ public class QuestionActivity extends AppCompatActivity {
     private EditText edit_text;
     private Button save_button;
     private String answer="";
-    MainHandler handler;
+    private String question="";
     TextView question_text_view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
+        final Bundle bundle = new Bundle();
+
+        new Thread() {
+            @Override
+            public void run() {
+                try {
+                    Document doc = Jsoup.connect("https://steemit.com/kr/@centering/1010").get();
+                    Elements sentence = doc.select("ol");
+
+                    String[] questions = sentence.text().split("\\?");
+                    //  질문 저장할 때 물음표 기준으로 저장.
+
+
+                    int j = (int) (Math.random() * questions.length);
+                    //Log.d("Qtion", "Q:" + questions[j] + " ? ");
+
+                    bundle.putString("Question", questions[j]+" ? ");
+                    Message msg = handler.obtainMessage();
+                    msg.setData(bundle);
+                    handler.sendMessage(msg);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+
 
         Intent intent = getIntent();
         String Uid=intent.getExtras().getString("Uid");
@@ -55,54 +81,24 @@ public class QuestionActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 answer=edit_text.getText().toString();
+                String question = question_text_view.getText().toString();
                 FirebaseFirestore database = FirebaseFirestore.getInstance();
                 database.collection("Users").document(Uid).collection("Date").document(date).update("Answer",answer);
+                database.collection("Users").document(Uid).collection("Date").document(date).update("Question",question);
+
                 Toast.makeText(getApplicationContext(), "save.", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
 
     }
-    class CrawlingThread extends Thread{
-        private String URL = "https://steemit.com/kr/@centering/1010";
+
+    Handler handler = new Handler() {
         @Override
-        public void run() {
-            try {
-                Document doc = Jsoup.connect(URL).get();
-                Elements sentence = doc.select("ol");
-
-                String[] questions = sentence.text().split("\\?");
-                //  질문 저장할 때 물음표 기준으로 저장.
-
-                   /* for(int i=0; i<questions.length; i++) {
-                        Log.d("Qtion", "Q:" + questions[i]+" ? ");
-                    }*/
-
-                int j = (int) (Math.random() * questions.length);
-
-                Message msg = handler.obtainMessage();
-                Bundle bundle=new Bundle();
-                bundle.putString("Question", questions[j]);
-                msg.setData(bundle);
-                handler.sendMessage(msg);
-                //질문 리스트 중에서 하나만 메인쓰레드로 핸들러를 이용하여 보냄
-
-            } catch (IOException ioException) {
-                ioException.printStackTrace();
-            }
+        public void handleMessage(Message msg) {
+            Bundle bundle = msg.getData();
+            question_text_view.setText(bundle.getString("Question"));
         }
+    };
 
-    }
-    class MainHandler extends Handler{
-        @Override
-        public void handleMessage(@NonNull Message msg){
-            super.handleMessage(msg);
-
-            Bundle bundle=msg.getData();
-            String question=bundle.getString("Question");
-
-            question_text_view.setText(question);
-
-        }
-    }
 }
