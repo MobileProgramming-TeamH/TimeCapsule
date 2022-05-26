@@ -46,7 +46,7 @@ public class QuestionActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    Document doc = Jsoup.connect("https://steemit.com/kr/@centering/1010").get();
+                    Document doc = Jsoup.connect("https://steemit.com/question/@leewonjae/6224pf#@steemit.korea/re-leewonjae-6224pf-20220526t051048974z").get();
                     Elements sentence = doc.select("ol");
 
                     String[] questions = sentence.text().split("\\?");
