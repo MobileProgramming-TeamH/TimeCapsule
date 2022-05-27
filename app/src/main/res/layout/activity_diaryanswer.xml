@@ -1,54 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#46606D">
 
+
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title"
         android:fontFamily="@font/ablb"
-        android:textColor="#f2f2f2"
-        android:textSize="36sp"
         android:gravity="center_horizontal"
+        android:text="@string/diary"
+        android:textAllCaps="false"
+        android:textColor="#f2f2f2"
+        android:textSize="20sp"
         android:layout_marginTop="100dp"/>
 
     <TextView
-        android:id="@+id/greeting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/question"
         android:fontFamily="@font/ablb"
+        android:textAllCaps="false"
         android:textColor="#f2f2f2"
         android:textSize="20sp"
         android:gravity="center"
-        android:layout_marginTop="150dp"/>
+        android:layout_marginTop="50dp"/>
 
-    <Button
-        android:id="@+id/goToLoginBtn"
+    <TextView
+        android:id="@+id/Answer1"
+        android:layout_height="250dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/login"
+        android:scrollbars="vertical"
         android:fontFamily="@font/ablb"
-        android:textColor="#46606D"
         android:textAllCaps="false"
-        android:background="@drawable/shape"
-        android:layout_marginTop="100dp"
+        android:textColor="#f2f2f2"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:background="@drawable/border"
+        android:layout_marginTop="40dp"
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp"/>
 
     <Button
-        android:id="@+id/goToJoinBtn"
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sign_up"
-        android:fontFamily="@font/ablb"
-        android:textColor="#46606D"
+        android:text="Back"
         android:textAllCaps="false"
+        android:fontFamily="@font/ablb"
         android:background="@drawable/shape"
-        android:layout_marginTop="20dp"
+        android:textColor="#46606D"
+        android:layout_marginTop="70dp"
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp"/>
 

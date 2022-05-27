@@ -8,7 +8,7 @@
         android:id="@+id/signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign - up"
+        android:text="@string/sign_up"
         android:textAllCaps="false"
         android:textColor="#F2F2F2"
         android:textSize="20sp"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:hint = "E-mail"
+        android:hint = "@string/email"
         android:textColorHint="#f2f2f2"
         android:fontFamily="@font/ablb"
         android:layout_marginLeft="70dp"
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
-        android:hint = "Password"
+        android:hint = "@string/password"
         android:textColorHint="#f2f2f2"
         android:fontFamily="@font/ablb"
         android:layout_marginTop="20dp"
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
-        android:hint = "Re-enter Password"
+        android:hint = "@string/password_check"
         android:textColorHint="#f2f2f2"
         android:fontFamily="@font/ablb"
         android:layout_marginTop="20dp"
@@ -62,7 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shape"
-        android:text="Sign-up"
+        android:text="@string/sign_up"
         android:textAllCaps="false"
         android:textColor="#46606D"
         android:fontFamily="@font/ablb"
@@ -71,30 +71,5 @@
         android:layout_marginBottom="20dp"
         />
 
-    <Button
-        android:id="@+id/back"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shape"
-        android:text="Back"
-        android:textAllCaps="false"
-        android:textColor="#46606D"
-        android:fontFamily="@font/ablb"
-        android:layout_marginRight="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginBottom="20dp"/>
-
-    <Button
-        android:id="@+id/login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shape"
-        android:text="Login"
-        android:textAllCaps="false"
-        android:textColor="#46606D"
-        android:fontFamily="@font/ablb"
-        android:layout_marginRight="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginBottom="20dp"/>
 
 </LinearLayout>

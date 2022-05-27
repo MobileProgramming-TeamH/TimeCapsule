@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -77,6 +78,8 @@ public class JoinActivity extends AppCompatActivity {
                             hashMap.put("email", userEmail);
                             FirebaseFirestore database = FirebaseFirestore.getInstance();
                             database.collection("Users").document(mAuth.getCurrentUser().getUid()).set(hashMap);
+
+
                             startActivity(moveToLogin);
                             finish();
                         }
