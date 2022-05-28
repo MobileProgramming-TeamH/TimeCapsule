@@ -20,11 +20,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 
 public class LoginActivity extends AppCompatActivity {
 
     private final static String TAG = "Login";
     private FirebaseAuth mAuth;
+    private String Uid;
     boolean isLogin = false;
     Intent moveToMain;
 
@@ -74,6 +76,14 @@ public class LoginActivity extends AppCompatActivity {
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             isLogin = true;
+                            for(UserInfo profile : user.getProviderData()){
+
+                                Uid=profile.getUid();
+
+                                Log.d("TOKEN",Uid);
+                                //String UId=Uid;
+                            }
+                            moveToMain.putExtra("Uid", Uid);
                             startActivity(moveToMain);
                             finish();
                         } else {

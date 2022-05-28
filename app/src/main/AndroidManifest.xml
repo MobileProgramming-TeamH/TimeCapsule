@@ -31,6 +31,9 @@
         <activity android:name=".DiaryActivity" />
         <activity android:name=".QuestionActivity"/>
         <activity android:name=".FindPasswordActivity"/>
+        <activity android:name=".AnswerActivity"/>
+        <activity android:name=".ManualActivity"/>
+        <activity android:name=".DiaryAnswerActivity"/>
     </application>
 
 </manifest>

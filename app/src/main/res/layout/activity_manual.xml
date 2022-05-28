@@ -5,57 +5,45 @@
     android:layout_height="match_parent"
     android:background="#46606D">
 
-
-
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/how_to_use"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ablb"
         android:gravity="center_horizontal"
-        android:text="@string/Past_question"
+        android:text="@string/how_to_use"
         android:textAllCaps="false"
-        android:textColor="#f2f2f2"
+        android:textColor="@color/title"
         android:textSize="20sp"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="75dp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/question"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:fontFamily="@font/ablb"
-        android:textAllCaps="false"
-        android:textColor="#f2f2f2"
-        android:textSize="20sp"
         android:gravity="center"
-        android:layout_marginTop="50dp"/>
-
-    <TextView
-        android:id="@+id/Answer"
-        android:layout_height="250dp"
-        android:layout_width="match_parent"
-        android:scrollbars="vertical"
-        android:fontFamily="@font/ablb"
+        android:text="@string/manual"
         android:textAllCaps="false"
         android:textColor="#f2f2f2"
         android:textSize="20sp"
-        android:textAlignment="center"
-        android:background="@drawable/border"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"/>
+        android:background="@drawable/border"/>
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back"
+        android:text="Let's get started"
         android:textAllCaps="false"
         android:fontFamily="@font/ablb"
         android:background="@drawable/shape"
         android:textColor="#46606D"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="50dp"
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp"/>
+
+
 
 </LinearLayout>

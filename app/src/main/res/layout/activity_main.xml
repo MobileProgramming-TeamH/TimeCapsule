@@ -5,6 +5,15 @@
     android:layout_height="match_parent"
     android:background="#46606D">
 
+    <Button
+        android:id="@+id/manual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape1"
+        android:layout_marginTop="10dp"
+        android:text="\?"
+        android:textSize="15dp"/>
+
     <TextView
         android:id="@+id/month"
         android:layout_width="wrap_content"
@@ -49,7 +58,20 @@
         android:textAllCaps="false"
         android:background="@drawable/shape"
         android:layout_below="@id/goToQuestionBtn"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"/>
+    <Button
+        android:id="@+id/goToDiaryAnswerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/diary_answer"
+        android:fontFamily="@font/ablb"
+        android:textColor="#46606D"
+        android:textAllCaps="false"
+        android:background="@drawable/shape"
+        android:layout_below="@id/goToDiaryBtn"
+        android:layout_marginTop="5dp"
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp"/>
 

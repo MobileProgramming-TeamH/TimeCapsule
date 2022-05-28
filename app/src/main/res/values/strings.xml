@@ -26,10 +26,12 @@
     <string name="question">Hello.\nHow are you, today?</string>
     <string name="find_password">Find Password</string>
     <string name="today_question">Today Question</string>
+    <string name="Past_question">Past Question</string>
     <string name="type_your_email">type your Email...</string>
     <string name="send_password_reset_email">Send password reset Email</string>
     <string name="month">Month</string>
     <string name="diary">Diary</string>
+    <string name="diary_answer">View Diary</string>
     <string name="save">save</string>
-    <string name="manual">This app can calm you down by recording and reflecting on your day.\n\n In today\'s question, record your feelings and thoughts when you see the question.\n\n In your diary, you\'re free to record what you didn\'t write in today\'s questions.\n\n In the answers, you can view the answers that you recorded in the past by question.\n\n We want you to get to know yourself more through this app. Good luck:)</string>
+    <string name="manual">This app can calm you down by recording and reflecting on your day.\n\n In today\'s question, record your feelings and thoughts when you see the question.\n\n In your diary, you\'re free to record what you didn\'t write in today\'s questions.\n\n In the answers, you can view the answers that you recorded in the past by question.\n\n Clicking on the day or the desired date gives you time to reflect and think about your thoughts 10 days ago. \n\n We want you to get to know yourself more through this app. Good luck:)</string>
 </resources>
