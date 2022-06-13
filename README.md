@@ -6,7 +6,7 @@
   * <https://github.com/MobileProgramming-TeamH/TimeCapsule.git>
 
 * Video
-  *<https://youtu.be/QNveiuTcHzg>
+  * <https://youtu.be/QNveiuTcHzg>
 
 
 ![모바일프로그래밍H팀](https://user-images.githubusercontent.com/75434746/171072524-33325cf2-4186-4c0c-b7be-a63253a00554.jpeg)
